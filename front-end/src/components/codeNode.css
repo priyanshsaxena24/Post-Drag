@@ -1,0 +1,8 @@
+.code-node {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 4px;
+  width: 180px;
+  font-size: 12px;
+}
