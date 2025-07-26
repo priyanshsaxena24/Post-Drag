@@ -2,10 +2,8 @@ services:
   - type: web
     name: post-drag-backend
     env: python
-    buildCommand: |
-      pip install -r requirements.txt
-      python manage.py collectstatic --noinput
-    startCommand: gunicorn code_runner.wsgi:application
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn code_runner.wsgi:application --chdir=code_runner"
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: code_runner.settings
