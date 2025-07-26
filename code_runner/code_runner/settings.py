@@ -1,3 +1,5 @@
+import os
+
 """
 Django settings for code_runner project.
 
@@ -25,7 +27,8 @@ SECRET_KEY = "django-insecure-l33t2df7t_el924)41xz78gr(7)#p@j%f@+9ibbcb241e!b5+b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 
 # Application definition
