@@ -1,13 +1,14 @@
 services:
   - type: web
-    name: django-backend
+    name: post-drag-backend
     env: python
-    plan: free
-    buildCommand: pip install -r requirements.txt
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py collectstatic --noinput
     startCommand: gunicorn code_runner.wsgi:application
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: code_runner.settings
       - key: PYTHON_VERSION
-        value: 3.10
+        value: 3.11
 
