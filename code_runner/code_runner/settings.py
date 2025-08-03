@@ -59,7 +59,7 @@ ROOT_URLCONF = "code_runner.urls"
 
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
+    "https://post-drag-jv2n.vercel.app/",
 ]
 
 TEMPLATES = [

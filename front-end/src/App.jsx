@@ -183,7 +183,7 @@ export default function App() {
           ? { code, input }
           : { code: finalCode };
 
-        const res = await fetch(`http://localhost:8000/api/execute/${language}/`, {
+        const res = await fetch(`https://post-drag-jv2n.vercel.app/api/execute/${language}/`, {
 
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
